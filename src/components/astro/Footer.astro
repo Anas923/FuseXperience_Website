@@ -1,16 +1,15 @@
 ---
-import GravityGallery from '../react/GravityGallery.jsx'
 ---
 <footer class="footer" id="footer">
   <div class="footer__watermark" aria-hidden="true">
-    <span class="watermark__orange">F</span><span class="watermark__dim">use</span><span class="watermark__orange">E</span><span class="watermark__dim">xperience</span>
+    <span>FuseXperience</span>
   </div>
 
   <div class="footer__content">
     <div class="footer__inner">
       <div>
         <a href="#" class="footer__brand-logo" aria-label="FuseXperience home">
-          <img src="/images/f-mark.svg" alt="" class="footer__brand-mark" aria-hidden="true" />
+          <img src="/images/fusexperience-logo.png" alt="" class="footer__brand-mark" aria-hidden="true" />
           <span>FuseXperience</span>
         </a>
         <p class="footer__brand">A conversion engine. Not a review platform. Turn browsers into buyers, buyers into creators, creators into ambassadors.</p>
@@ -21,6 +20,7 @@ import GravityGallery from '../react/GravityGallery.jsx'
           <a href="#funnel" class="footer__link">How It Works</a>
           <a href="#capture" class="footer__link">Capture</a>
           <a href="#post-purchase" class="footer__link">Post-Purchase</a>
+          <a href="/why" class="footer__link">Why FuseXperience</a>
           <a href="#demo" class="footer__link">Demo</a>
         </nav>
       </div>
@@ -49,13 +49,6 @@ import GravityGallery from '../react/GravityGallery.jsx'
         <a href="/cookies" class="footer__link">Cookie Policy</a>
       </div>
     </div>
-    <div class="footer__watermark-bottom" aria-hidden="true">
-      <span class="watermark__orange">F</span><span class="watermark__dim">use</span><span class="watermark__orange">E</span><span class="watermark__dim">xperience</span>
-    </div>
-  </div>
-
-  <div class="footer__gallery" aria-hidden="true">
-    <GravityGallery client:load count={6} size={300} shape="square" gravY={0.8} friction={1} />
   </div>
 </footer>
 
@@ -83,49 +76,16 @@ import GravityGallery from '../react/GravityGallery.jsx'
   user-select: none;
   white-space: nowrap;
   line-height: 1;
-  display: none;
 }
 
 .watermark__dim {
   color: rgba(255, 255, 255, 0.03);
-}
-
-.footer__watermark-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: var(--space-8, 2rem);
-  z-index: 2;
-  font-size: clamp(2rem, 8vw, 5rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  line-height: 1;
 }
 
 .watermark__orange {
   color: rgba(255, 90, 31, 0.06);
   -webkit-text-stroke: 1px rgba(255, 90, 31, 0.1);
   text-stroke: 1px rgba(255, 90, 31, 0.1);
-}
-
-.watermark__dim {
-  color: rgba(255, 255, 255, 0.03);
-}
-
-.footer__gallery {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.footer__gallery * {
-  pointer-events: none;
 }
 
 .footer__content {
@@ -210,7 +170,6 @@ import GravityGallery from '../react/GravityGallery.jsx'
   .footer { height: auto; min-height: 70vh; }
   .footer__content { position: relative; bottom: auto; padding: var(--space-16, 4rem) var(--space-6, 1.5rem) var(--space-8, 2rem); }
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--space-10, 2.5rem); }
-  .footer__gallery { position: relative; height: 300px; pointer-events: none; }
 }
 
 @media (max-width: 768px) {
@@ -222,6 +181,5 @@ import GravityGallery from '../react/GravityGallery.jsx'
   .footer__bottom { flex-direction: column; gap: var(--space-4, 1rem); text-align: left; }
   .footer__legal { justify-content: flex-start; }
   .footer__watermark { font-size: clamp(2rem, 11vw, 6rem); }
-  .footer__gallery { display: none; }
 }
 </style>
