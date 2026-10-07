@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout>
+  <slot name="head">
+    <title>Cookie Policy — FuseXperience</title>
+    <meta name="robots" content="noindex" />
+  </slot>
+
+  <main class="legal-page">
+    <div class="legal-container">
+      <a href="/" class="legal-back">&larr; Back to Home</a>
+      <h1>Cookie Policy</h1>
+      <p class="legal-date"><em>Last updated: July 17, 2026</em></p>
+
+      <h2>1. What Are Cookies</h2>
+      <p>Cookies are small text files stored on your device by your web browser. They help websites remember your preferences, understand how you use the site, and deliver a more personalized experience. Similar technologies include local storage, session storage, and pixels.</p>
+
+      <h2>2. How We Use Cookies</h2>
+      <p>FuseXperience uses cookies and similar technologies for the following purposes:</p>
+      <ul>
+        <li><strong>Essential / Strictly Necessary:</strong> Required for the Platform to function — authentication, session management, security. These cannot be disabled.</li>
+        <li><strong>Functional:</strong> Remember your preferences, such as language or region settings, to provide a tailored experience.</li>
+        <li><strong>Analytics:</strong> Understand how visitors interact with the Platform — which pages are visited, how long sessions last, and where traffic comes from. We use aggregated data to improve the service.</li>
+        <li><strong>Marketing:</strong> Track the effectiveness of our campaigns and deliver relevant content (only with your consent where required).</li>
+      </ul>
+
+      <h2>3. Cookies We Use</h2>
+      <p>Below is a list of the primary cookies used on the FuseXperience Platform:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie Name</th>
+            <th>Type</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>fusexperience_session</td>
+            <td>Essential</td>
+            <td>Maintains your login session</td>
+            <td>Session</td>
+          </tr>
+          <tr>
+            <td>fusexperience_prefs</td>
+            <td>Functional</td>
+            <td>Stores user preferences</td>
+            <td>1 year</td>
+          </tr>
+          <tr>
+            <td>_ga, _gid</td>
+            <td>Analytics</td>
+            <td>Google Analytics — usage tracking</td>
+            <td>2 years / 24 hours</td>
+          </tr>
+          <tr>
+            <td>_fbp</td>
+            <td>Marketing</td>
+            <td>Facebook Pixel — campaign measurement</td>
+            <td>90 days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Third-Party Cookies</h2>
+      <p>Some cookies are placed by third-party services we use:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> — anonymized usage analysis</li>
+        <li><strong>Vimeo / Wistia</strong> — video embed playback tracking</li>
+        <li><strong>Stripe</strong> — payment processing (checkout pages only)</li>
+      </ul>
+      <p>These third parties have their own privacy and cookie policies governing the data they collect.</p>
+
+      <h2>5. Managing Cookies</h2>
+      <p>You can control and manage cookies in several ways:</p>
+      <ul>
+        <li><strong>Browser Settings:</strong> Most browsers allow you to block or delete cookies. Go to your browser's settings or privacy section to adjust preferences.</li>
+        <li><strong>Opt-Out Tools:</strong> Visit <a href="https://optout.aboutads.info" target="_blank" rel="noopener">optout.aboutads.info</a> or <a href="https://youronlinechoices.com" target="_blank" rel="noopener">youronlinechoices.com</a> to manage advertising preferences.</li>
+        <li><strong>Platform Consent Banner:</strong> You can update your cookie preferences at any time by clicking the "Cookie Settings" link in the footer of our site.</li>
+      </ul>
+      <p>Please note that disabling essential cookies may affect the functionality of the Platform.</p>
+
+      <h2>6. Do Not Track</h2>
+      <p>We do not currently respond to "Do Not Track" (DNT) signals. We will update this policy if our practices change.</p>
+
+      <h2>7. Updates to This Policy</h2>
+      <p>We may update this Cookie Policy to reflect changes in technology, regulation, or our practices. We encourage you to review this page periodically.</p>
+
+      <h2>8. Contact</h2>
+      <p>For questions about our use of cookies, contact us at:<br />
+      <strong>Email:</strong> privacy@fusexperience.com<br />
+      <strong>Address:</strong> FuseXperience, 548 Market St, San Francisco, CA 94104</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+.legal-page {
+  background: #0A0A0B;
+  min-height: 100vh;
+  color: #F0F0F2;
+  font-family: Inter, system-ui, sans-serif;
+  padding: var(--space-16, 4rem) 0;
+}
+.legal-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+}
+.legal-back {
+  display: inline-block;
+  color: #FF5A1F;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-8, 2rem);
+  transition: opacity 0.15s;
+}
+.legal-back:hover { opacity: 0.7; }
+.legal-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+.legal-date {
+  color: #6A6A72;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-8, 2rem);
+}
+.legal-page h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--space-8, 2rem);
+  margin-bottom: var(--space-3, 0.75rem);
+  color: #F0F0F2;
+}
+.legal-page p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #A0A0A8;
+  margin-bottom: var(--space-4, 1rem);
+}
+.legal-page ul {
+  margin: 0 0 var(--space-4, 1rem) 0;
+  padding-left: 1.5rem;
+}
+.legal-page li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #A0A0A8;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+.legal-page a {
+  color: #FF5A1F;
+  text-decoration: none;
+}
+.legal-page a:hover { text-decoration: underline; }
+.legal-page strong {
+  color: #F0F0F2;
+}
+.legal-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-6, 1.5rem);
+  font-size: 0.875rem;
+}
+.legal-page th,
+.legal-page td {
+  text-align: left;
+  padding: var(--space-3, 0.75rem);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.legal-page th {
+  color: #F0F0F2;
+  font-weight: 600;
+  background: rgba(255,255,255,0.03);
+}
+.legal-page td {
+  color: #A0A0A8;
+}
+</style>

@@ -1,0 +1,228 @@
+---
+import KineticGrid from '../react/KineticGrid.jsx'
+import PixelCard from '../react/PixelCard.jsx'
+---
+<section class="section" id="capture">
+  <div class="capture-bg" aria-hidden="true">
+    <div class="capture-orb"></div>
+  </div>
+  <div class="capture-kinetic-bg" aria-hidden="true">
+    <KineticGrid client:load spacing={40} radius={150} strength={4} trail={true} dotColor="#FF5A1F" lineColor="#FF5A1F" trailColor="#FF5A1F" />
+  </div>
+  <div class="container">
+    <div class="capture-layout">
+      <div class="capture-intro">
+        <p class="section-label">The Capture</p>
+        <h2 class="section-title">Capture desire. Capture authenticity. Capture loyalty.</h2>
+        <p class="section-desc">Every stage of the customer journey is an opportunity to collect content that converts. FuseXperience captures the right emotion at the right moment.</p>
+      </div>
+      <div class="capture-cards">
+        <PixelCard client:load className="card" trigger="hover" appearFrom="middle">
+          <div class="card__icon desire">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 class="card__title">Pre-purchase desire</h3>
+          <p class="card__desc">Ask &ldquo;Why do you want this?&rdquo; before checkout. The answer captures raw desire from someone who doesn&rsquo;t own it yet &mdash; your most persuasive conversion asset.</p>
+        </PixelCard>
+        <PixelCard client:load className="card" trigger="hover" appearFrom="middle">
+          <div class="card__icon authenticity">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="card__title">Post-purchase authenticity</h3>
+          <p class="card__desc">Ask existing customers to show brand love. Their genuine enthusiasm captures authentic UGC from real owners — far more convincing than polished ads.</p>
+        </PixelCard>
+        <PixelCard client:load className="card" trigger="hover" appearFrom="middle">
+          <div class="card__icon creator">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <h3 class="card__title">Creator moment</h3>
+          <p class="card__desc">Everyday customers become creators. They share their cinematic moment with their network in exchange for rewards — driving organic virality around your products.</p>
+        </PixelCard>
+        <PixelCard client:load className="card" trigger="hover" appearFrom="middle">
+          <div class="card__icon loyalty">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
+          </div>
+          <h3 class="card__title">Loyalty loop</h3>
+          <p class="card__desc">A timed post-purchase journey follows up at every emotional stage — building engagement and loyalty without a membership program.</p>
+        </PixelCard>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.section {
+  position: relative;
+  padding: var(--space-24, 6rem) 0;
+  overflow: hidden;
+}
+
+.capture-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.capture-orb {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,90,31,0.08), transparent 70%);
+  filter: blur(80px);
+}
+
+.capture-kinetic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+}
+
+.capture-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-16, 4rem);
+  align-items: start;
+}
+
+.capture-intro {
+  position: sticky;
+  top: calc(var(--nav-height, 4rem) + var(--space-8, 2rem));
+}
+
+.section-label {
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FF5A1F;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.section-title {
+  font-size: var(--text-3xl, 2rem);
+  font-weight: 700;
+  line-height: var(--leading-tight, 1.05);
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary, #F0F0F2);
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.section-desc {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+}
+
+.capture-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5, 1.25rem);
+}
+
+.card {
+  padding: var(--space-8, 2rem);
+  border-radius: 16px;
+  background: var(--color-surface, #111114);
+  border: 1px solid var(--color-border, rgba(255,255,255,0.06));
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover {
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.card__icon.desire {
+  background: linear-gradient(135deg, rgba(255,90,31,0.2), rgba(255,90,31,0.05));
+  color: #FF5A1F;
+}
+
+.card__icon.authenticity {
+  background: linear-gradient(135deg, rgba(234,242,255,0.12), rgba(234,242,255,0.03));
+  color: #EAF2FF;
+}
+
+.card__icon.creator {
+  background: linear-gradient(135deg, rgba(255,159,74,0.2), rgba(255,159,74,0.05));
+  color: #FF9F4A;
+}
+
+.card__icon.loyalty {
+  background: linear-gradient(135deg, rgba(255,90,31,0.2), rgba(255,90,31,0.05));
+  color: #FF5A1F;
+}
+
+.card__title {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 600;
+  color: var(--color-text-primary, #F0F0F2);
+  margin-bottom: var(--space-2, 0.5rem);
+  line-height: var(--leading-snug, 1.15);
+}
+
+.card__desc {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+}
+
+@media (max-width: 1024px) {
+  .capture-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-12, 3rem);
+  }
+  .capture-intro { position: static; }
+  .capture-cards { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .capture-cards { grid-template-columns: 1fr; }
+  .section-title { font-size: var(--text-2xl, 1.5rem); }
+  .section-desc { font-size: var(--text-sm, 0.875rem); }
+}
+</style>

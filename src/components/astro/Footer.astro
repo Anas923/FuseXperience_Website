@@ -1,0 +1,227 @@
+---
+import GravityGallery from '../react/GravityGallery.jsx'
+---
+<footer class="footer" id="footer">
+  <div class="footer__watermark" aria-hidden="true">
+    <span class="watermark__orange">F</span><span class="watermark__dim">use</span><span class="watermark__orange">E</span><span class="watermark__dim">xperience</span>
+  </div>
+
+  <div class="footer__content">
+    <div class="footer__inner">
+      <div>
+        <a href="#" class="footer__brand-logo" aria-label="FuseXperience home">
+          <img src="/images/f-mark.svg" alt="" class="footer__brand-mark" aria-hidden="true" />
+          <span>FuseXperience</span>
+        </a>
+        <p class="footer__brand">A conversion engine. Not a review platform. Turn browsers into buyers, buyers into creators, creators into ambassadors.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Product</p>
+        <nav class="footer__links" aria-label="Product links">
+          <a href="#funnel" class="footer__link">How It Works</a>
+          <a href="#capture" class="footer__link">Capture</a>
+          <a href="#post-purchase" class="footer__link">Post-Purchase</a>
+          <a href="#demo" class="footer__link">Demo</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Connect</p>
+        <nav class="footer__links" aria-label="Social links">
+          <a href="#" class="footer__link">Twitter</a>
+          <a href="#" class="footer__link">LinkedIn</a>
+          <a href="#" class="footer__link">Instagram</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Legal</p>
+        <nav class="footer__links" aria-label="Legal links">
+          <a href="/privacy" class="footer__link">Privacy</a>
+          <a href="/terms" class="footer__link">Terms</a>
+          <a href="/cookies" class="footer__link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 FuseXperience. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="/privacy" class="footer__link">Privacy Policy</a>
+        <a href="/terms" class="footer__link">Terms of Service</a>
+        <a href="/cookies" class="footer__link">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer__watermark-bottom" aria-hidden="true">
+      <span class="watermark__orange">F</span><span class="watermark__dim">use</span><span class="watermark__orange">E</span><span class="watermark__dim">xperience</span>
+    </div>
+  </div>
+
+  <div class="footer__gallery" aria-hidden="true">
+    <GravityGallery client:load count={6} size={300} shape="square" gravY={0.8} friction={1} />
+  </div>
+</footer>
+
+<style>
+.footer {
+  position: relative;
+  height: 100vh;
+  min-height: 750px;
+  overflow: hidden;
+  background: #0A0A0B;
+}
+
+.footer__watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  font-size: clamp(3.5rem, 11vw, 18rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 1;
+  display: none;
+}
+
+.watermark__dim {
+  color: rgba(255, 255, 255, 0.03);
+}
+
+.footer__watermark-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: var(--space-8, 2rem);
+  z-index: 2;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.watermark__orange {
+  color: rgba(255, 90, 31, 0.06);
+  -webkit-text-stroke: 1px rgba(255, 90, 31, 0.1);
+  text-stroke: 1px rgba(255, 90, 31, 0.1);
+}
+
+.watermark__dim {
+  color: rgba(255, 255, 255, 0.03);
+}
+
+.footer__gallery {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.footer__gallery * {
+  pointer-events: none;
+}
+
+.footer__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 500px;
+  z-index: 1;
+  padding: var(--space-8, 2rem);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-12, 3rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+  width: 100%;
+}
+
+.footer__brand {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+}
+
+.footer__brand-logo {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 700;
+  color: var(--color-text-primary, #F0F0F2);
+  margin-bottom: var(--space-3, 0.75rem);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer__brand-logo:hover { opacity: 0.7; }
+.footer__brand-mark {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.footer__col-title {
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-tertiary, #6A6A72);
+  margin-bottom: var(--space-4, 1rem);
+  font-weight: 600;
+}
+
+.footer__links { display: flex; flex-direction: column; gap: var(--space-3, 0.75rem); }
+
+.footer__link {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  transition: color 0.15s var(--ease-out-expo, ease);
+  text-decoration: none;
+}
+
+.footer__link:hover { color: var(--color-text-primary, #F0F0F2); }
+
+.footer__bottom {
+  max-width: 1400px;
+  margin: var(--space-8, 2rem) auto 0;
+  padding: var(--space-6, 1.5rem) var(--space-6, 1.5rem) 0;
+  border-top: 1px solid var(--color-border, rgba(255,255,255,0.08));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--color-text-tertiary, #6A6A72);
+  width: 100%;
+}
+
+.footer__legal { display: flex; gap: var(--space-4, 1rem); }
+
+@media (max-width: 1024px) {
+  .footer { height: auto; min-height: 70vh; }
+  .footer__content { position: relative; bottom: auto; padding: var(--space-16, 4rem) var(--space-6, 1.5rem) var(--space-8, 2rem); }
+  .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--space-10, 2.5rem); }
+  .footer__gallery { position: relative; height: 300px; pointer-events: none; }
+}
+
+@media (max-width: 768px) {
+  .footer { height: auto; min-height: auto; }
+  .footer__content { position: relative; bottom: auto; padding: var(--space-8, 2rem) var(--space-6, 1.5rem) var(--space-8, 2rem); }
+  .footer__inner { grid-template-columns: 1fr; gap: var(--space-8, 2rem); text-align: left; }
+  .footer__brand-logo { justify-content: flex-start; }
+  .footer__links { align-items: flex-start; }
+  .footer__bottom { flex-direction: column; gap: var(--space-4, 1rem); text-align: left; }
+  .footer__legal { justify-content: flex-start; }
+  .footer__watermark { font-size: clamp(2rem, 11vw, 6rem); }
+  .footer__gallery { display: none; }
+}
+</style>

@@ -1,0 +1,28 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ember" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB35C"/>
+      <stop offset="45%" stop-color="#FF5A1F"/>
+      <stop offset="100%" stop-color="#C2280A"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- glow ghost copy -->
+  <g filter="url(#glow)" opacity="0.55">
+    <polygon points="150,70 240,70 220,430 130,430" fill="url(#ember)"/>
+    <polygon points="150,70 370,70 340,160 172,160" fill="url(#ember)"/>
+    <polygon points="145,225 320,225 292,315 122,315" fill="url(#ember)"/>
+  </g>
+
+  <!-- solid blocks -->
+  <polygon points="150,70 240,70 220,430 130,430" fill="url(#ember)"/>
+  <polygon points="150,70 370,70 340,160 172,160" fill="url(#ember)"/>
+  <polygon points="145,225 320,225 292,315 122,315" fill="url(#ember)"/>
+</svg>

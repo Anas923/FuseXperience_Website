@@ -1,0 +1,23 @@
+{
+  "name": "fusexperience",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/react": "^6.0.1",
+    "astro": "^7.0.9",
+    "matter-js": "^0.20.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "gsap": "^3.15.0",
+    "three": "^0.149.0"
+  }
+}

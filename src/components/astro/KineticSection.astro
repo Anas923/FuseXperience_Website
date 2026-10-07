@@ -1,0 +1,41 @@
+---
+<section class="section kinetic" id="kinetic">
+  <div class="container">
+    <div class="kinetic__phrase" data-index="0">More content.</div>
+    <div class="kinetic__phrase" data-index="1">More reach.</div>
+    <div class="kinetic__phrase" data-index="2">More customers.</div>
+    <div class="kinetic__phrase" data-index="3">More sales.</div>
+    <div class="kinetic__phrase" data-index="4">More loyalty.</div>
+  </div>
+</section>
+
+<style>
+.section.kinetic {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container { text-align: center; }
+.kinetic__phrase {
+  font-size: var(--text-5xl, 3.5rem);
+  font-weight: 700;
+  line-height: var(--leading-tight, 1.05);
+  letter-spacing: -0.03em;
+  opacity: 0.15;
+  color: var(--color-text-secondary, #A0A0A8);
+  margin-bottom: var(--space-2, 0.5rem);
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.kinetic__phrase.is-active { opacity: 1; color: var(--color-text-primary, #F0F0F2); }
+.kinetic__phrase.is-active.is-ember { color: #FF5A1F; }
+@media (max-width: 1024px) {
+  .kinetic__phrase { font-size: var(--text-4xl, 2.5rem); }
+}
+
+@media (max-width: 768px) {
+  .section.kinetic { min-height: 50vh; }
+  .kinetic__phrase { font-size: var(--text-3xl, 1.75rem); margin-bottom: var(--space-3, 0.75rem); }
+}
+</style>

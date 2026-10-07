@@ -1,0 +1,177 @@
+---
+import ParticleImage from '../react/ParticleImage.jsx'
+---
+<section class="section" id="post-purchase">
+  <div class="container">
+    <div class="post-purchase__layout">
+      <div class="post-purchase__content">
+        <p class="section-label">Post-Purchase Journey</p>
+        <h2 class="section-title">Three phases. One relationship.</h2>
+        <p class="section-subtitle">A timed journey that follows up at every emotional stage.</p>
+        <div class="timeline" id="timeline">
+          <div class="timeline__line-progress" id="timelineProgress"></div>
+          <div class="timeline__node" data-phase="1">
+            <div class="timeline__node-dot"></div>
+            <p class="timeline__node-phase">Phase 1 &mdash; Desire</p>
+            <h3 class="timeline__node-title">Why do you want it?</h3>
+            <p class="timeline__node-desc">Capture the reason behind the purchase. Then follow up: did it deliver? This closes the loop between expectation and reality.</p>
+            <div class="timeline__node-steps">
+              <span class="timeline__node-step">&ldquo;Tell us why you want it&rdquo;</span>
+              <span class="timeline__node-step">&ldquo;Did it deliver?&rdquo;</span>
+            </div>
+          </div>
+          <div class="timeline__node" data-phase="2">
+            <div class="timeline__node-dot"></div>
+            <p class="timeline__node-phase">Phase 2 &mdash; Loyalty</p>
+            <h3 class="timeline__node-title">Why do you love our brand?</h3>
+            <p class="timeline__node-desc">Reinforce the emotional connection. Ask customers to articulate their brand affinity and confirm the purchase deepened that bond.</p>
+            <div class="timeline__node-steps">
+              <span class="timeline__node-step">&ldquo;Tell us why you love our brand&rdquo;</span>
+              <span class="timeline__node-step">&ldquo;Did this purchase reinforce that?&rdquo;</span>
+            </div>
+          </div>
+          <div class="timeline__node" data-phase="3">
+            <div class="timeline__node-dot"></div>
+            <p class="timeline__node-phase">Phase 3 &mdash; Identity</p>
+            <h3 class="timeline__node-title">How do you style our gear?</h3>
+            <p class="timeline__node-desc">The final stage turns customers into identity-driven creators. They show how your product fits into their life — the most authentic UGC possible.</p>
+            <div class="timeline__node-steps">
+              <span class="timeline__node-step">&ldquo;Show how you style our gear&rdquo;</span>
+              <span class="timeline__node-step">&ldquo;Show how you&rsquo;re styling your latest purchase&rdquo;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-purchase__particle">
+        <ParticleImage
+          client:load
+          imageConfig={{ image: "/images/f-mark.svg", mode: "fit", scale: 10, sizeUnit: "%", widthPct: 100, heightPct: 100 }}
+          particleCount={50}
+          particleSize={7}
+          particleShape="circle"
+          particleColor="original"
+          hoverEnabled={true}
+          repulsionEnabled={true}
+          hoverConfig={{ hoverType: "roam", roamOpacity: 0.35, transition: { duration: 0.45, ease: "easeInOut" } }}
+          repulsionConfig={{ repulsionMode: "outside", repulsionForce: 10, repulsionRadius: 110 }}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.section { padding: var(--space-24, 6rem) 0; }
+.container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 var(--space-6, 1.5rem); }
+.post-purchase__layout {
+  display: flex;
+  gap: var(--space-12, 3rem);
+  align-items: stretch;
+}
+.post-purchase__content {
+  flex: 0 0 auto;
+  max-width: 520px;
+}
+.post-purchase__particle {
+  flex: 1 1 0%;
+  min-height: 500px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0A0A0B;
+}
+
+.section-label {
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FF5A1F;
+  margin-bottom: var(--space-4, 1rem);
+}
+.section-title {
+  font-size: var(--text-4xl, 2.5rem);
+  font-weight: 700;
+  line-height: var(--leading-tight, 1.05);
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary, #F0F0F2);
+  margin-bottom: var(--space-6, 1.5rem);
+}
+.section-subtitle {
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+  margin-bottom: var(--space-12, 3rem);
+}
+.timeline { position: relative; padding-left: var(--space-12, 3rem); }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--color-border, rgba(255,255,255,0.08));
+}
+.timeline__line-progress {
+  position: absolute;
+  left: 15px; top: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #FF5A1F, #EAF2FF);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+.timeline__node {
+  position: relative;
+  padding-bottom: var(--space-16, 4rem);
+  opacity: 0.4;
+}
+.timeline__node-dot {
+  position: absolute;
+  left: calc(-1 * var(--space-12, 3rem) + 7px);
+  top: 4px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border, rgba(255,255,255,0.08));
+  background: var(--color-bg, #0A0A0B);
+}
+.timeline__node-phase {
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #FF5A1F;
+  margin-bottom: var(--space-2, 0.5rem);
+  font-weight: 600;
+}
+.timeline__node-title {
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: 600;
+  color: var(--color-text-primary, #F0F0F2);
+  margin-bottom: var(--space-2, 0.5rem);
+}
+.timeline__node-desc {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+  max-width: 480px;
+}
+.timeline__node-steps {
+  display: flex;
+  gap: var(--space-4, 1rem);
+  margin-top: var(--space-4, 1rem);
+}
+.timeline__node-step {
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  border-radius: 8px;
+  background: var(--color-surface, #111114);
+  border: 1px solid var(--color-border, rgba(255,255,255,0.08));
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-secondary, #A0A0A8);
+}
+@media (max-width: 1024px) {
+  .post-purchase__layout { flex-direction: column; }
+  .post-purchase__content { max-width: none; }
+  .post-purchase__particle { min-height: 400px; }
+}
+@media (max-width: 768px) {
+  .timeline__node-steps { flex-direction: column; }
+}
+</style>

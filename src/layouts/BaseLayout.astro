@@ -1,0 +1,63 @@
+---
+// OG image — design a real 1200x630 card with the FuseXperience wordmark and Fuse Ember accent
+const ogImage = '/assets/og-image.jpg';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuseXperience — The Conversion Engine for DTC Brands</title>
+  <meta name="description" content="FuseXperience captures short vertical video from shoppers before and after purchase, turns footage into cinematic moments, and runs a post-purchase journey that builds loyalty without a membership program." />
+  <link rel="canonical" href="https://fusexperience.com/" />
+  <meta name="theme-color" content="#FF5A1F" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FuseXperience — The Conversion Engine for DTC Brands" />
+  <meta property="og:description" content="Capture desire before purchase, authenticity after it, and long-term loyalty without a membership program." />
+  <meta property="og:url" content="https://fusexperience.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FuseXperience — The Conversion Engine for DTC Brands" />
+  <meta name="twitter:description" content="Capture desire before purchase, authenticity after it, and long-term loyalty without a membership program." />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/variables.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FuseXperience",
+    "applicationCategory": "MarketingApplication",
+    "operatingSystem": "Web",
+    "description": "A UGC-and-conversion engine that captures short vertical video from shoppers before and after purchase, turns footage into shareable cinematic moments, and runs a timed post-purchase journey.",
+    "url": "https://fusexperience.com/",
+    "offers": { "@type": "Offer", "availability": "https://schema.org/ContactForAvailability" }
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FuseXperience",
+    "url": "https://fusexperience.com/",
+    "description": "A conversion engine that turns browsers into buyers, buyers into creators, and creators into ambassadors."
+  })} />
+
+  <slot name="head" />
+</head>
+<body>
+  <slot />
+</body>
+</html>

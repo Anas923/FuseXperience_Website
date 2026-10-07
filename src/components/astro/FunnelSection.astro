@@ -1,0 +1,212 @@
+---
+<section class="section funnel" id="funnel">
+  <div class="funnel__track" id="funnelTrack">
+    <div class="funnel__stage funnel__stage--browser" data-stage="0">
+      <div class="funnel__stage-inner">
+        <div class="funnel__stage-info">
+          <p class="funnel__stage-number">01</p>
+          <h2 class="funnel__stage-label">Browser</h2>
+          <p class="funnel__stage-desc">An undecided shopper lands on your product page. They need a reason to choose you over the competition.</p>
+        </div>
+        <div class="funnel__stage-visual">
+          <div class="funnel__phone-frame">
+            <div class="funnel__phone-screen">
+              <p class="funnel__phone-prompt">Prompt</p>
+              <p class="funnel__phone-question">Why do you want to try this product?</p>
+              <div class="funnel__phone-record-btn"><div class="funnel__phone-record-btn-inner"></div></div>
+              <p style="font-size:var(--text-xs,0.75rem);color:var(--color-text-tertiary,#6A6A72)">Hold to record</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="funnel__stage funnel__stage--buyer" data-stage="1">
+      <div class="funnel__stage-inner">
+        <div class="funnel__stage-info">
+          <p class="funnel__stage-number">02</p>
+          <h2 class="funnel__stage-label">Buyer</h2>
+          <p class="funnel__stage-desc">Desire captured before purchase becomes your most powerful conversion asset. They bought. Now the journey begins.</p>
+        </div>
+        <div class="funnel__stage-visual">
+          <div class="funnel__phone-frame">
+            <div class="funnel__phone-screen">
+              <p class="funnel__phone-prompt">Reward Unlocked</p>
+              <p class="funnel__phone-question">Your cinematic moment is ready to share</p>
+              <div style="width:100%;height:120px;border-radius:8px;background:linear-gradient(135deg,rgba(255,90,31,0.15),rgba(255,90,31,0.3));display:flex;align-items:center;justify-content:center;color:#FF5A1F;font-size:var(--text-2xl,1.5rem)">&#9654;</div>
+              <p style="font-size:var(--text-sm,0.875rem);color:var(--color-text-secondary,#A0A0A8)">Share to boost your reward</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="funnel__stage funnel__stage--creator" data-stage="2">
+      <div class="funnel__stage-inner">
+        <div class="funnel__stage-info">
+          <p class="funnel__stage-number">03</p>
+          <h2 class="funnel__stage-label">Creator</h2>
+          <p class="funnel__stage-desc">That same shopper becomes a content creator, sharing their cinematic moment with their network in exchange for a bigger reward.</p>
+        </div>
+        <div class="funnel__stage-visual">
+          <div class="funnel__phone-frame">
+            <div class="funnel__phone-screen">
+              <p class="funnel__phone-prompt">Share to Earn</p>
+              <p class="funnel__phone-question">Share your moment and unlock an exclusive reward</p>
+              <div style="display:flex;gap:var(--space-4,1rem)">
+                <span style="width:44px;height:44px;border-radius:50%;background:var(--color-surface-raised,#1A1A1F);display:flex;align-items:center;justify-content:center;font-size:var(--text-lg,1.125rem)">X</span>
+                <span style="width:44px;height:44px;border-radius:50%;background:var(--color-surface-raised,#1A1A1F);display:flex;align-items:center;justify-content:center;font-size:var(--text-lg,1.125rem)">IG</span>
+                <span style="width:44px;height:44px;border-radius:50%;background:var(--color-surface-raised,#1A1A1F);display:flex;align-items:center;justify-content:center;font-size:var(--text-lg,1.125rem)">TT</span>
+              </div>
+              <p style="font-size:var(--text-xs,0.75rem);color:var(--color-text-tertiary,#6A6A72)">Share to any platform</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="funnel__stage funnel__stage--ambassador" data-stage="3">
+      <div class="funnel__stage-inner">
+        <div class="funnel__stage-info">
+          <p class="funnel__stage-number">04</p>
+          <h2 class="funnel__stage-label">Ambassador</h2>
+          <p class="funnel__stage-desc">The relationship deepens through a timed post-purchase journey that manufactures loyalty — without a membership program.</p>
+        </div>
+        <div class="funnel__stage-visual">
+          <div class="funnel__phone-frame">
+            <div class="funnel__phone-screen">
+              <p class="funnel__phone-prompt">Phase 3</p>
+              <p class="funnel__phone-question">Show us how you style your latest purchase</p>
+              <div style="width:100%;height:120px;border-radius:8px;background:linear-gradient(135deg,rgba(234,242,255,0.1),rgba(234,242,255,0.2));display:flex;align-items:center;justify-content:center;color:#EAF2FF;font-size:var(--text-2xl,1.5rem)">&#9835;</div>
+              <p style="font-size:var(--text-xs,0.75rem);color:var(--color-text-tertiary,#6A6A72)">Authenticity. Delivered.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.section.funnel {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.funnel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.funnel__stage {
+  position: absolute;
+  inset: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.funnel__stage-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16, 4rem);
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+}
+.funnel__stage-number {
+  font-size: var(--text-7xl, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4, 1rem);
+  background: linear-gradient(135deg, var(--color-text-tertiary, #6A6A72), transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.funnel__stage-label {
+  font-size: var(--text-4xl, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: var(--leading-tight, 1.05);
+  margin-bottom: var(--space-4, 1rem);
+}
+.funnel__stage-desc {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-secondary, #A0A0A8);
+  line-height: var(--leading-relaxed, 1.65);
+  max-width: 440px;
+}
+.funnel__stage--browser .funnel__stage-label { color: #EAF2FF; }
+.funnel__stage--buyer .funnel__stage-label { color: #FF5A1F; }
+.funnel__stage--creator .funnel__stage-label { color: #FF9F4A; }
+.funnel__stage--ambassador .funnel__stage-label { color: #EAF2FF; }
+.funnel__phone-frame {
+  width: 280px;
+  height: 560px;
+  border-radius: 16px;
+  border: 2px solid var(--color-border, rgba(255,255,255,0.08));
+  background: var(--color-surface, #111114);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  margin: 0 auto;
+}
+.funnel__phone-screen {
+  padding: var(--space-6, 1.5rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-4, 1rem);
+}
+.funnel__phone-prompt {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--color-text-tertiary, #6A6A72);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.funnel__phone-question {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 600;
+  color: var(--color-text-primary, #F0F0F2);
+  line-height: var(--leading-snug, 1.15);
+}
+.funnel__phone-record-btn {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  border: 3px solid #FF5A1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s var(--ease-out-expo, ease);
+}
+.funnel__phone-record-btn-inner {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #FF5A1F;
+  transition: border-radius 0.3s var(--ease-out-expo, ease);
+}
+@media (max-width: 1024px) {
+  .funnel__phone-frame { width: 240px; height: 480px; }
+}
+@media (max-width: 768px) {
+  .section.funnel { height: auto; min-height: auto; }
+  .funnel__stage { 
+    position: relative !important; 
+    min-height: auto !important; 
+    padding: var(--space-16, 4rem) 0; 
+    opacity: 1 !important; 
+    visibility: visible !important;
+    transform: none !important;
+  }
+  .funnel__stage-inner { grid-template-columns: 1fr; gap: var(--space-8, 2rem); text-align: center; }
+  .funnel__stage-desc { margin: 0 auto; }
+  .funnel__stage-visual { order: -1; }
+  .funnel__phone-frame { width: 260px; height: 520px; }
+  .funnel__stage-number { font-size: var(--text-6xl, 4.5rem); }
+  .funnel__stage-label { font-size: var(--text-3xl, 2rem); }
+}
+</style>

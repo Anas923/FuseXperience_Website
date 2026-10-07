@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout>
+  <slot name="head">
+    <title>Terms of Service — FuseXperience</title>
+    <meta name="robots" content="noindex" />
+  </slot>
+
+  <main class="legal-page">
+    <div class="legal-container">
+      <a href="/" class="legal-back">&larr; Back to Home</a>
+      <h1>Terms of Service</h1>
+      <p class="legal-date"><em>Last updated: July 17, 2026</em></p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using FuseXperience (the "Platform"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Platform.</p>
+
+      <h2>2. Description of Service</h2>
+      <p>FuseXperience provides a conversion engine that captures short-form video testimonials and survey responses from shoppers before and after purchase, transforms the footage into shareable content, and delivers a timed post-purchase follow-up journey designed to build loyalty and generate authentic user-generated content.</p>
+
+      <h2>3. Account Registration</h2>
+      <p>You must create an account to use the Platform. You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account. You must provide accurate, current, and complete information.</p>
+
+      <h2>4. Subscription &amp; Billing</h2>
+      <p>Fees for paid plans are billed in advance on a monthly or annual basis as selected during registration. All fees are non-refundable except as expressly stated in our refund policy. We may change our fees with 30 days' notice. Late payments may result in suspension of service.</p>
+
+      <h2>5. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Platform for any unlawful purpose or in violation of any applicable law</li>
+        <li>Upload or transmit viruses, malware, or any malicious code</li>
+        <li>Attempt to gain unauthorized access to any part of the Platform</li>
+        <li>Use the Platform to collect content that infringes on third-party intellectual property rights</li>
+        <li>Scrape, crawl, or otherwise extract data from the Platform without written authorization</li>
+        <li>Use the Platform to send unsolicited communications (spam)</li>
+      </ul>
+
+      <h2>6. User Content</h2>
+      <p>You retain all rights to the content you collect through the Platform ("Your Content"). By using the Platform, you grant FuseXperience a limited license to store, process, and display Your Content solely to provide the service. You represent that you have obtained all necessary consents from end-users whose content you collect.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>The FuseXperience name, logo, platform interface, and underlying technology are proprietary. You may not copy, modify, reverse-engineer, or create derivative works without prior written consent.</p>
+
+      <h2>8. Data Handling &amp; Privacy</h2>
+      <p>Our handling of personal data is governed by our <a href="/privacy">Privacy Policy</a>. You are responsible for configuring data retention, consent collection, and ensuring compliance with applicable privacy laws (including GDPR, CCPA).</p>
+
+      <h2>9. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, FuseXperience shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Platform. Our total liability for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.</p>
+
+      <h2>10. Disclaimer of Warranties</h2>
+      <p>The Platform is provided "as is" without warranty of any kind, express or implied. We do not guarantee that the Platform will be uninterrupted, error-free, or secure. You use the Platform at your own risk.</p>
+
+      <h2>11. Termination</h2>
+      <p>Either party may terminate this agreement at any time. We may suspend or terminate your access if you violate these terms. Upon termination, your Content will be deleted within 30 days unless otherwise required by law.</p>
+
+      <h2>12. Governing Law</h2>
+      <p>These Terms shall be governed by the laws of the State of California, without regard to its conflict of laws principles. Any disputes shall be resolved exclusively in the courts of San Francisco County, California.</p>
+
+      <h2>13. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. Material changes will be communicated via email or platform notice. Continued use after changes take effect constitutes acceptance.</p>
+
+      <h2>14. Contact</h2>
+      <p>For questions about these Terms, contact us at:<br />
+      <strong>Email:</strong> legal@fusexperience.com<br />
+      <strong>Address:</strong> FuseXperience, 548 Market St, San Francisco, CA 94104</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+.legal-page {
+  background: #0A0A0B;
+  min-height: 100vh;
+  color: #F0F0F2;
+  font-family: Inter, system-ui, sans-serif;
+  padding: var(--space-16, 4rem) 0;
+}
+.legal-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+}
+.legal-back {
+  display: inline-block;
+  color: #FF5A1F;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-8, 2rem);
+  transition: opacity 0.15s;
+}
+.legal-back:hover { opacity: 0.7; }
+.legal-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+.legal-date {
+  color: #6A6A72;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-8, 2rem);
+}
+.legal-page h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--space-8, 2rem);
+  margin-bottom: var(--space-3, 0.75rem);
+  color: #F0F0F2;
+}
+.legal-page p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #A0A0A8;
+  margin-bottom: var(--space-4, 1rem);
+}
+.legal-page ul {
+  margin: 0 0 var(--space-4, 1rem) 0;
+  padding-left: 1.5rem;
+}
+.legal-page li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #A0A0A8;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+.legal-page a {
+  color: #FF5A1F;
+  text-decoration: none;
+}
+.legal-page a:hover { text-decoration: underline; }
+.legal-page strong {
+  color: #F0F0F2;
+}
+</style>

@@ -1,0 +1,65 @@
+---
+<section class="social-proof" id="social-proof">
+  <div class="container">
+    <p class="social-proof__label">Built for brands running high-volume DTC checkout</p>
+    <div class="social-proof__logos">
+      <span class="social-proof__logo">Brand</span>
+      <span class="social-proof__logo">Retailer</span>
+      <span class="social-proof__logo">DTC Co</span>
+      <span class="social-proof__logo">Label</span>
+      <span class="social-proof__logo">House</span>
+      <span class="social-proof__logo">Studio</span>
+    </div>
+  </div>
+</section>
+
+<style>
+.social-proof {
+  padding: var(--space-16, 4rem) 0;
+  border-top: 1px solid var(--color-border, rgba(255,255,255,0.08));
+  border-bottom: 1px solid var(--color-border, rgba(255,255,255,0.08));
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 1.5rem);
+}
+
+.social-proof__label {
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary, #6A6A72);
+  text-align: center;
+  margin-bottom: var(--space-8, 2rem);
+}
+
+.social-proof__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-12, 3rem);
+  flex-wrap: wrap;
+  opacity: 0.3;
+  filter: grayscale(1);
+}
+
+.social-proof__logo {
+  height: 24px;
+  color: var(--color-text-secondary, #A0A0A8);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .social-proof { padding: var(--space-12, 3rem) 0; }
+  .social-proof__logos { gap: var(--space-8, 2rem); }
+  .social-proof__logo { font-size: var(--text-xs, 0.75rem); height: 20px; }
+}
+</style>
