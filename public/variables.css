@@ -1,0 +1,43 @@
+:root {
+  --nav-height: 4rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+
+  --leading-tight: 1.05;
+  --leading-relaxed: 1.65;
+
+  --color-text-primary: #F0F0F2;
+  --color-text-secondary: #A0A0A8;
+  --color-text-tertiary: #6A6A72;
+  --color-bg: #0A0A0B;
+  --color-surface: #111114;
+  --color-surface-raised: #1A1A1F;
+  --color-border: rgba(255,255,255,0.08);
+  --color-accent: #FF5A1F;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --section-min-height: 100vh;
+}
